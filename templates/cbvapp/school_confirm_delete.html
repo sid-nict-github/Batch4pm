@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{% extends 'cbvapp/base.html' %}
+
+{% block dynamic_section %}
+<h1 class="display-1">School Delete Confirmation</h1>
+
+<p>
+    Are you sure you want to delete the record of the school - {{school.name}} ?
+</p>
+
+<form method="post">
+    {% csrf_token %}
+
+    <button type="submit" class="btn btn-success">YES</button>
+    <a href="school-list" class="btn btn-danger">NO</a>
+</form>
+
+{% endblock  %}

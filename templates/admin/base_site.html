@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<div id="site-name" style="background-color: cyan;">
+    <a href="{% url 'admin:index' %}">
+        <h1 style='color: red;'><img src='https://amazesussex.org.uk/wp-content/uploads/2018/05/clock-4pm.png' height='60px' /> Batch 4pm Project</h1>
+    </a>
+</div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

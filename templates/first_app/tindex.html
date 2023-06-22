@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% comment %} load the static directory {% endcomment %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+    <h1>Index Page</h1>
+    <h3>Name: {{keyname}}</h3>
+    <h3>Email: {{keyemail}}</h3>
+    <hr>
+    <p style="text-align: justify; padding: 10px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit doloremque officia a id, voluptatem sequi reiciendis non inventore voluptate ipsam illum consectetur, iusto quibusdam. Nisi autem optio quasi in iste animi, dolore deserunt, debitis mollitia recusandae facere nobis dignissimos doloribus excepturi necessitatibus ducimus! Incidunt sequi velit repudiandae, recusandae rerum corrupti nam cupiditate? Sapiente perspiciatis, consequuntur quia sit illo laudantium, sint quas incidunt iure nostrum nam. Molestias, sed corporis aspernatur eaque odit et adipisci ipsam aliquid aliquam maxime quibusdam. Accusamus commodi laborum esse omnis a quo optio neque minima, libero facilis quia. Commodi soluta perferendis natus nobis, deleniti obcaecati distinctio vitae?
+    </p>
+    <hr>
+    <img src='{% static "images/pic5.png" %}' height="300px" />
+    <hr>
+    <a href='2nd'>Open Second</a>
+</body>
+</html>

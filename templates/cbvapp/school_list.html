@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+{% extends 'cbvapp/base.html' %}
+
+{% block dynamic_section %}
+<h1 class="display-1">School List</h1>
+
+<div class="list-group">
+{% for school in schools %}
+
+    <a href="school={{ school.id }}" class="list-group-item list-group-item-action">
+        {{ school.id }}. {{ school.name }}
+    </a>
+      
+{% endfor %}
+</div>
+
+{% endblock  %}

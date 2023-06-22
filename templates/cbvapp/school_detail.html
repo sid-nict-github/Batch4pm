@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+{% extends 'cbvapp/base.html' %}
+
+{% block dynamic_section %}
+<h1 class="display-1">School Detail</h1>
+<h2 class="display-2">Details of the School:</h2>
+<div class="table-responsive">
+    <table class="table table-dark table-striped">
+        <tr>
+            <th>School ID</th>
+            <td>{{school_detail.id}}</td>
+        </tr>
+        <tr>
+            <th>School Name</th>
+            <td>{{school_detail.name}}</td>
+        </tr>
+        <tr>
+            <th>Principal's Name</th>
+            <td>{{school_detail.principal}}</td>
+        </tr>
+        <tr>
+            <th>Location</th>
+            <td>{{school_detail.location}}</td>
+        </tr>
+    </table>
+
+    <a href="delete={{ school_detail.id }}" class="btn btn-danger">Delete This School's Record</a>
+
+    <a href="update={{ school_detail.id }}" class="btn btn-info">Update This School's Record</a>
+</div>
+
+
+{% endblock  %}

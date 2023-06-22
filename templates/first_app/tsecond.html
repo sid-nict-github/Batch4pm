@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% comment %} load the static directory {% endcomment %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+    <h1>Second Page</h1>
+    <hr>
+    <h2>All the users:</h2>
+    <table style="width: 50%;" cellspacing="10px" cellpadding="2px">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for record in allusers %}
+            <tr>
+                <td>{{record.username}}</td>
+                <td>{{record.full_name}}</td>
+                <td>{{record.email}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <hr>
+    <a href="{% static 'documents/2. Introduction to IoT.pdf' %}" download>Download IoT notes</a>
+    <hr>
+    <a href="home">Open Home page</a>
+</body>
+</html>

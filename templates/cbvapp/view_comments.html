@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{% extends 'cbvapp/base.html' %}
+
+{% block dynamic_section %}
+<h1 class="display-1">View comments</h1>
+
+{% for record in response %}
+    <div class="alert alert-info">
+        Comment By: <i>{{record.email}}</i>
+        <br/>
+        <p style="text-align: justify;">
+            {{record.body}}
+        </p>
+    </div>
+    <hr>
+{% endfor %}
+
+{% endblock  %}
